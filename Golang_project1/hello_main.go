@@ -10,6 +10,7 @@ func main() {
 	Go_base.HelloVar()
 	Go_base.HelloDefaultVar()
 	Go_base.HelloDatatypeConvert()
+	Go_base.HelloStrconv()
 }
 
 // Run the code
