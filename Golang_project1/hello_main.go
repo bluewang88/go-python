@@ -15,7 +15,8 @@ func main() {
 
 	// Go_base.PointerReceiverDemo()
 	// Go_base.ValueReceiverDemo()
-	Go_base.Hello_gorouties()
+	// Go_base.Hello_gorouties()
+	Go_base.Hello_func_properties()
 }
 
 // Run the code

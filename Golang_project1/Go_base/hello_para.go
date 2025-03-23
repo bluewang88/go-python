@@ -5,7 +5,8 @@ package Go_base
 import (
 	"fmt"
 )
-funcc sum(args ...int) int {
+
+func hello_sum(args ...int) int {
 	total := 0
 	for _, v := range args {
 		total += v
@@ -14,6 +15,17 @@ funcc sum(args ...int) int {
 }
 
 func Hello_para() {
-	fmt.Println(sum(1, 2, 3, 4, 5))
-	fmt.Println(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+	fmt.Println(hello_sum(1, 2, 3, 4, 5))
+	fmt.Println(hello_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+	hello_slice := []int{1, 2, 3, 4, 5}
+	fmt.Println(hello_sum(hello_slice...))
+
+	hello_slice2 := []int{6, 7, 8, 9, 10}
+	fmt.Println(hello_sum(hello_slice2...))
+
+	hello_arry := [...]int{1, 2, 3, 4, 5}
+	fmt.Printf("%T\n", hello_arry)
+	fmt.Println(hello_sum(hello_arry[:]...))
+
 }
