@@ -2,15 +2,20 @@ package main
 
 import (
 	"Golang_project1/Go_base"
-	"fmt"
 )
 
 func main() {
-	fmt.Println("通过fmt.Println函数打印Hello, World!")
-	Go_base.HelloVar()
-	Go_base.HelloDefaultVar()
-	Go_base.HelloDatatypeConvert()
-	Go_base.HelloStrconv()
+	// fmt.Println("通过fmt.Println函数打印Hello, World!")
+	// Go_base.HelloVar()
+	// Go_base.HelloDefaultVar()
+	// Go_base.HelloDatatypeConvert()
+	// Go_base.HelloStrconv()
+	// Go_base.ArgsDemo()
+	// Go_base.FlagDemo()
+
+	// Go_base.PointerReceiverDemo()
+	// Go_base.ValueReceiverDemo()
+	Go_base.Hello_gorouties()
 }
 
 // Run the code
