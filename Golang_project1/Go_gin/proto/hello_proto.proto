@@ -1,0 +1,31 @@
+/*
+ * Copyright 2023 CloudWeGo Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+
+ *这个文件是一个 Protocol Buffers (protobuf) 定义文件，它定义了数据的结构化格式，
+ *用于在不同系统和不同编程语言间进行高效的数据交换。
+ * 代码生成：通过 protoc 编译器可以自动生成多种语言的代码
+ protoc -I . hello_proto.proto --go_out=plugins=grpc:. 生成 go 代码
+ */
+
+syntax = "proto3"; // 使用 proto3 语法
+
+option go_package = ".;proto";  // 生成的 go 代码的包名 . 表示当前目录 proto 表示生成的包名
+
+message  Teacher { //message 是定义消息的关键字，Teacher 是消息的名称
+    string name = 1;
+    int32 age = 2;
+    string subject = 3;
+    string email = 4;
+}
