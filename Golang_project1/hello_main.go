@@ -1,6 +1,8 @@
 package main
 
-import "Golang_project1/Go_gin"
+import (
+	"Golang_project1/Go_base"
+)
 
 // "Golang_project1/Go_base"
 
@@ -8,6 +10,7 @@ func main() {
 	// fmt.Println("通过fmt.Println函数打印Hello, World!")
 	// Go_base.HelloVar()
 	// Go_base.HelloDefaultVar()
+	Go_base.HelloArray() // 数组
 	// Go_base.HelloDatatypeConvert()
 	// Go_base.HelloStrconv()
 	// Go_base.ArgsDemo()
@@ -29,7 +32,7 @@ func main() {
 	// Go_gin.HelloProtoBuf() // 返回protobuf格式的数据
 	// Go_gin.HelloFormValidation() // 表单验证
 	// Go_gin.HelloFormValidationLogin() // 表单验证,login
-	Go_gin.HelloFormValidationRegistion() // 表单验证,registion
+	// Go_gin.HelloFormValidationRegistion() // 表单验证,registion
 
 }
 
