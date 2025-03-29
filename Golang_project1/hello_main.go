@@ -11,8 +11,8 @@ func main() {
 	// Go_base.HelloVar()
 	// Go_base.HelloDefaultVar()
 	// Go_base.HelloArray() // 数组
-	// Go_base.HelloSlice() // 切片
-	Go_base.HelloSlicePointers() // 切片指针
+	Go_base.HelloSlice() // 切片
+	// Go_base.HelloSlicePointers() // 切片指针
 	// Go_base.HelloArrayValueSemantics() //数组赋值是值传递
 	// Go_base.HelloDatatypeConvert()
 	// Go_base.HelloStrconv()
