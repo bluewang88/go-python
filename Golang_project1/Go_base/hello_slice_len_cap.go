@@ -2,15 +2,15 @@ package Go_base
 
 import "fmt"
 
-// DemonstrateSliceLenCap shows examples of slice length and capacity
-func DemonstrateSliceLenCap() []string {
+// HelloSliceLenCap shows examples of slice length and capacity
+func HelloSliceLenCap() []string {
 	var results []string
 
 	// Basic slice example
 	s := make([]int, 5, 10)
 	msg := fmt.Sprintf("Basic Slice:\nLength: %d, Capacity: %d\nElements: %v", len(s), cap(s), s)
 	fmt.Println(msg)
-	results = append(results, msg)
+	results = append(results, msg) //msg追加到results切片中
 
 	// Reslicing example
 	s2 := s[:3]

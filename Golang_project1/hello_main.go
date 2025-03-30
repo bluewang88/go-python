@@ -1,8 +1,6 @@
 package main
 
-import (
-	"Golang_project1/Go_base"
-)
+import "Golang_project1/Go_base"
 
 // "Golang_project1/Go_base"
 
@@ -11,9 +9,14 @@ func main() {
 	// Go_base.HelloVar()
 	// Go_base.HelloDefaultVar()
 	// Go_base.HelloArray() // 数组
-	Go_base.HelloSlice() // 切片
+	// Go_base.HelloSlice() // 切片
 	// Go_base.HelloSlicePointers() // 切片指针
+	// Go_base.HelloSliceLenCap() // 切片长度和容量
+	// Go_base.HelloSliceOfSlice() // 切片的切片
+	// Go_base.HelloSliceFunc() // 切片存储函数
+	// Go_base.HelloSliceDeleteElem() // 切片删除元素
 	// Go_base.HelloArrayValueSemantics() //数组赋值是值传递
+	Go_base.HelloMap() // map
 	// Go_base.HelloDatatypeConvert()
 	// Go_base.HelloStrconv()
 	// Go_base.ArgsDemo()

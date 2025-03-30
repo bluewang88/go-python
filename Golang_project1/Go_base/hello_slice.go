@@ -157,22 +157,79 @@ func HelloSlice() {
 	fmt.Println("silce6切片容量:", cap(*slice6))
 	fmt.Println("slice的数据类型:", fmt.Sprintf("%T", slice6))   // 打印slice的数据类型
 	fmt.Println("*slice的数据类型:", fmt.Sprintf("%T", *slice6)) // 打印slice的数据类型
+
+	// 在切片中添加元素
+	*slice6 = append(*slice6, 1)
+	*slice6 = append(*slice6, 2)
+	*slice6 = append(*slice6, 3)
+	*slice6 = append(*slice6, 4)
+
+	fmt.Println("通过slice6访问第六个切片slice6:", slice6)
+	fmt.Println("通过*slice访问第六个切片slice6的值:", *slice6) // 通过指针访问切片的值
+	fmt.Println("通过*slice6访问第六个切片slice6的长度:", len(*slice6))
+	fmt.Println("通过*slice6访问第六个切片slice6的容量:", cap(*slice6))
+	fmt.Println("slice6的数据类型:", fmt.Sprintf("%T", slice6))   // 打印slice的数据类型
+	fmt.Println("*slice6的数据类型:", fmt.Sprintf("%T", *slice6)) // 打印slice的数据类型
+	fmt.Println("slice6的地址:", &slice6)
+	fmt.Printf("slice6的地址:%p\n", &slice6) // 打印slice的地址
+	fmt.Println("*slice6的地址:", *slice6)
+	fmt.Printf("*slice6的地址:%p\n", *slice6) // 打印slice的地址
+
 	fmt.Println("----------------------")
 
 	// 切片的第七种初始化方式：通过append函数创建
 	fmt.Println("-----------第七种初始化方式：通过append函数创建--------------")
 	slice7 := []int{} // 创建一个空切片
 	// 通过append函数创建切片
+	/*
+			* Go中的切片扩容策略
+			* 当切片的容量不足时，Go会自动扩容切片，扩容策略如下：
+			* 如果新申请的容量大于2倍的原切片的容量，则直接使用新申请的容量。
+			* 如果新申请的容量小于2倍的原切片的容量，则扩容为原来的2倍。
+			* 如果新申请的容量小于原切片的容量，则扩容为原来的1.5倍。
+			* 1. 如果切片的长度小于1024，则扩容为原来的2倍。
+			* 2. 如果切片的长度大于等于1024，则扩容为原来的1.25倍。
+			* 3. 如果切片的长度大于等于1024，则扩容为原来的1.5倍。
+			* 4. 如果切片的长度大于等于1024，则扩容为原来的2倍。
+
+			* Go 1.17切片扩容时会进行内存对齐，这个和内存分配策略相关。进行内存对齐之后，新 slice 的容量是要 大于等于老 slice 容量的 2倍或者1.25倍。
+			* 当新切片需要的容量cap大于两倍扩容的容量，则直接按照新切片需要的容量扩容；
+			* 当原 slice 容量 < 1024 的时候，新 slice 容量变成原来的 2 倍；
+			* 当原 slice 容量 > 1024，进入一个循环，每次容量变成原来的1.25倍,直到大于期望容量。
+
+			一、go1.18 之前：
+
+		如果期望容量大于当前容量的两倍就会使用期望容量；
+		如果当前切片的长度小于 1024 就会将容量翻倍；
+		如果当前切片的长度大于 1024 就会每次增加 25% 的容量，直到新容量大于期望容量；
+			二、go1.18 之后：
+
+		如果期望容量大于当前容量的两倍就会使用期望容量；
+		如果当前切片的长度小于阈值（默认 256）就会将容量翻倍；
+		如果当前切片的长度大于等于阈值（默认 256），就会每次增加 25% 的容量，基准是 newcap + 3*threshold，直到新容量大于期望容量；
+
+	*/
+	fmt.Printf("slice7没增加元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 1)
+	fmt.Printf("slice7第一次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 2)
+	fmt.Printf("slice7第二次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 3)
+	fmt.Printf("slice7第三次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 4)
+	fmt.Printf("slice7第四次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 5)
+	fmt.Printf("slice7第五次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 6)
+	fmt.Printf("slice7第六次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 7)
+	fmt.Printf("slice7第七次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 8)
+	fmt.Printf("slice7第八次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 9)
+	fmt.Printf("slice7第九次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	slice7 = append(slice7, 10)
+	fmt.Printf("slice7第十次增加一个元素，其长度:%d,容量是:%d\n", len(slice7), cap(slice7))
 	fmt.Println("第七个切片slice7:", slice7)
 	fmt.Println("第七个切片slice7长度:", len(slice7))
 	fmt.Println("第七个切片slice7容量:", cap(slice7))
