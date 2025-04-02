@@ -273,6 +273,8 @@ func HelloSlice() {
 
 	// 删除切片中的元素
 	slice = append(slice[:1], slice[2:]...) // 删除下标为1的元素
+	//... 是 Go 语言的展开操作符（spread operator），操作符 ... 将一个切片展开成独立的参数列表
+
 	fmt.Println("删除元素后的切片:", slice)
 
 	// 通过切片传递参数

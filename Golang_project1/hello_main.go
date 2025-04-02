@@ -10,11 +10,13 @@ func main() {
 	// Go_base.HelloDefaultVar()
 	// Go_base.HelloArray() // 数组
 	// Go_base.HelloSlice() // 切片
-	Go_base.HelloSlice2()
+	// Go_base.HelloSlice2()
+	// Go_base.HelloSliceCapGrow() // 切片的容量和增长
 	// Go_base.HelloSlicePointers() // 切片指针
 	// Go_base.HelloSliceLenCap() // 切片长度和容量
 	// Go_base.HelloSliceOfSlice() // 切片的切片
 	// Go_base.HelloSliceFunc() // 切片存储函数
+	Go_base.HelloSliceFuncParam() // 切片作为函数参数
 	// Go_base.HelloSliceDeleteElem() // 切片删除元素
 	// Go_base.HelloArrayValueSemantics() //数组赋值是值传递
 	// Go_base.HelloMap() // map
