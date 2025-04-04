@@ -1,10 +1,10 @@
-module Golang_project1
+module Golang_project1 //module模块自身路径
 
-go 1.23.0
+go 1.23.0 //声明这个模块使用的go版本
 
 toolchain go1.23.7
 
-require (
+require ( // 依赖的模块
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.1

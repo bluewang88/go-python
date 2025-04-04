@@ -1,8 +1,9 @@
 package main
 
-import "Golang_project1/Go_base"
-
 // "Golang_project1/Go_base"
+import (
+	"Golang_project1/Go_base/objectgo"
+)
 
 func main() {
 	// fmt.Println("通过fmt.Println函数打印Hello, World!")
@@ -16,7 +17,7 @@ func main() {
 	// Go_base.HelloSliceLenCap() // 切片长度和容量
 	// Go_base.HelloSliceOfSlice() // 切片的切片
 	// Go_base.HelloSliceFunc() // 切片存储函数
-	Go_base.HelloSliceFuncParam() // 切片作为函数参数
+	// Go_base.HelloSliceFuncParam() // 切片作为函数参数
 	// Go_base.HelloSliceDeleteElem() // 切片删除元素
 	// Go_base.HelloArrayValueSemantics() //数组赋值是值传递
 	// Go_base.HelloMap() // map
@@ -24,6 +25,8 @@ func main() {
 	// Go_base.HelloStrconv()
 	// Go_base.ArgsDemo()
 	// Go_base.FlagDemo()
+
+	objectgo.HelloType() // type的使用方式
 
 	// Go_base.PointerReceiverDemo()
 	// Go_base.ValueReceiverDemo()
