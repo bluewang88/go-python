@@ -1,9 +1,9 @@
-package objectgo
+package objectgotest
 
 import "fmt"
 
 //type的使用方式
-//go不支持面向对象编程，面向对象编程特征：1.封装 2.继承 3.多态
+//go不支持面向对象编程，面向对象编程特征：1.封装(数据和方法) 2.继承(组合) 3.多态
 // 但是可以使用type来定义新的类型，
 // 1. 给一个类型起一个别名 type <newType> = <oldType>
 // 2. 用一个已有的类型作为基础，创建一个新的类型 type <newType> <oldType>

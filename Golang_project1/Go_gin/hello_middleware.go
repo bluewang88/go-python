@@ -43,7 +43,7 @@ func HelloMiddleware() {
 	// }))
 	// r.Use(gin.RecoveryWithWriter(os.Stdout)) // 使用Recovery中间件,将错误信息输出到标准输出
 
-	authrized := r.Group("/auth")
+	// authrized := r.Group("/auth")
 
 	// 定义一个中间件
 	r.Use(func(c *gin.Context) {

@@ -2,6 +2,9 @@ package Go_base
 
 import "fmt"
 
+///使用结构体的指针访问结构体成员数据
+// 结构体指针可以直接使用点号访问字段
+
 type VertexTest struct {
 	X int
 	Y int
@@ -13,7 +16,7 @@ func HelloStructPointer() {
 	p := &v
 	p.X = 1e9        // 通过指针修改结构体的值
 	fmt.Println(v.X) // 直接访问结构体的值
-	fmt.Println(p.X) // 通过指针访问结构体的值
+	fmt.Println(p.X) // 通过指针访问结构体的值，在go编译时会自动转换为(*p).X
 	// 结构体指针可以直接使用点号访问字段
 	fmt.Println((*p).X) // 通过指针访问结构体的值
 	(*p).X = 1e9

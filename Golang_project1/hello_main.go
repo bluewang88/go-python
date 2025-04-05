@@ -2,7 +2,7 @@ package main
 
 // "Golang_project1/Go_base"
 import (
-	"Golang_project1/Go_base/objectgo"
+	objectgotest "Golang_project1/Go_base/objectgo"
 )
 
 func main() {
@@ -26,7 +26,9 @@ func main() {
 	// Go_base.ArgsDemo()
 	// Go_base.FlagDemo()
 
-	objectgo.HelloType() // type的使用方式
+	// objectgotest.HelloType() // type的使用方式
+
+	objectgotest.HelloInterface()
 
 	// Go_base.PointerReceiverDemo()
 	// Go_base.ValueReceiverDemo()

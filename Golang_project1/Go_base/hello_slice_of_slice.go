@@ -11,11 +11,11 @@ func HelloSliceOfSlice() {
 	//创建一个二维切片
 	//已经在外层指定了切片的类型为 [][]int 时，内部元素的类型 []int 就不需要重复指定了，
 	//因为 Go 编译器可以从外层声明推断出内层元素类型。
-	sliceOfSlice := [][]int{
-		[]int{1, 2, 3},
-		[]int{4, 5, 6},
-		[]int{7, 8, 9},
-	}
+	// sliceOfSlice := [][]int{
+	// 	[]int{1, 2, 3},
+	// 	[]int{4, 5, 6},
+	// 	[]int{7, 8, 9},
+	// }
 
 	//创建一个二维切片
 	sliceOfSlice2 := [][]int{
@@ -45,7 +45,7 @@ func HelloSliceOfSlice() {
 
 	//打印二维切片
 	fmt.Println("---------------打印二维切片-------------------")
-	fmt.Println("sliceOfSlice:", sliceOfSlice)
+	// fmt.Println("sliceOfSlice:", sliceOfSlice)
 	fmt.Println("sliceOfSlice2:", sliceOfSlice2)
 
 	//打印二维切片的元素
