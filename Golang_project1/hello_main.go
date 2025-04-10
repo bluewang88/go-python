@@ -2,7 +2,8 @@ package main
 
 // "Golang_project1/Go_base"
 import (
-	objectgotest "Golang_project1/Go_base/objectgo"
+	// objectgotest "Golang_project1/Go_base/objectgo"
+	gorouting_test "Golang_project1/Go_base/gorouting"
 )
 
 func main() {
@@ -28,7 +29,17 @@ func main() {
 
 	// objectgotest.HelloType() // type的使用方式
 
-	objectgotest.HelloInterface()
+	// objectgotest.HelloInterface()
+
+	// gorouting_test.HelloMutex1() // 互斥锁
+	// gorouting_test.HelloRWMutex() // 读写锁
+
+	// gorouting_test.HelloGoRoutineWorld()\
+	gorouting_test.HelloGoroutineSort() // goroutine的使用
+
+	// gorouting_test.HelloChannelType()
+
+	// gorouting_test.HelloChannel() // 通道的使用
 
 	// Go_base.PointerReceiverDemo()
 	// Go_base.ValueReceiverDemo()
