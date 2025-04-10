@@ -2,8 +2,7 @@ package main
 
 // "Golang_project1/Go_base"
 import (
-	// objectgotest "Golang_project1/Go_base/objectgo"
-	gorouting_test "Golang_project1/Go_base/gorouting"
+	gorpc_server "Golang_project1/Go_RPC/server"
 )
 
 func main() {
@@ -35,11 +34,16 @@ func main() {
 	// gorouting_test.HelloRWMutex() // 读写锁
 
 	// gorouting_test.HelloGoRoutineWorld()\
-	gorouting_test.HelloGoroutineSort() // goroutine的使用
+	// gorouting_test.HelloGoroutineSort() // goroutine的使用
 
 	// gorouting_test.HelloChannelType()
 
 	// gorouting_test.HelloChannel() // 通道的使用
+
+	//-------------rpc-------------------
+	// gorpc_server.HelloRpcServer() // rpc server
+	gorpc_server.HelloJsonRpcServer() // jsonrpc server
+	// gorpc_client.HelloRpcClient() // rpc client
 
 	// Go_base.PointerReceiverDemo()
 	// Go_base.ValueReceiverDemo()
