@@ -1,6 +1,7 @@
 package gorpc_server
 
 import (
+	gorpcserverhelloworld "Golang_project1/Go_RPC/server/helloWorld"
 	"net"
 	"net/rpc"
 	"net/rpc/jsonrpc"
@@ -12,7 +13,9 @@ func HelloJsonRpcServer() {
 		panic(err)
 	}
 
-	_ = rpc.RegisterName("HelloService", &HelloService{})
+	_ = rpc.RegisterName("HelloService", &gorpcserverhelloworld.HelloService{})
+
+	println("Starting JSON RPC server on port 1234...")
 
 	defer listener.Close()
 

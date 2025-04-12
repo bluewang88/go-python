@@ -2,7 +2,7 @@ package main
 
 // "Golang_project1/Go_base"
 import (
-	gorpc_server "Golang_project1/Go_RPC/server"
+	rpcoptimizedhello "Golang_project1/Go_RPC/server/optimized_hello"
 )
 
 func main() {
@@ -42,8 +42,10 @@ func main() {
 
 	//-------------rpc-------------------
 	// gorpc_server.HelloRpcServer() // rpc server
-	gorpc_server.HelloJsonRpcServer() // jsonrpc server
+	// gorpc_server.HelloJsonRpcServer() // jsonrpc server
+	// gorpc_server.HelloHttpRpcServer() // http rpc server
 	// gorpc_client.HelloRpcClient() // rpc client
+	rpcoptimizedhello.HelloRpcServerOptimized() // jsonrpc server
 
 	// Go_base.PointerReceiverDemo()
 	// Go_base.ValueReceiverDemo()

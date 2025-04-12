@@ -1,4 +1,4 @@
-package gorpc_server
+package gorpcserverhelloworld
 
 import (
 	"net"
