@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+//使用如下命令生成python代码
+//python -m grpc_tools.protoc --python_out=. --grpc_python_out=. -I. hello.proto
+message HelloRequest {
+  string name = 1; // name是名称， 1是字段的编号，字段编号不能重复
+}
