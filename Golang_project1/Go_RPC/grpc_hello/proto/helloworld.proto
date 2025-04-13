@@ -1,0 +1,25 @@
+syntax = "proto3";
+option go_package = ".;proto"; // 生成的 go 代码的包名 . 表示当前目录 proto 表示生成的包名
+
+//protoc -I . goods.proto --go_out=plugins=grpc:.  //淘汰
+//protoc --proto_path=src --go_out=out --go_opt=paths=source_relative foo.proto bar/baz.proto
+//protoc --proto_path=. --go_out=. --go_opt=paths=source_relative helloworld.proto  //只生成massage相关的g代码
+//protoc --proto_path=. --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative helloworld.proto
+
+service Greeter {
+    // 定义SayHello方法
+    // 输入参数：HelloRequest
+    // 输出参数：HelloReply 
+    rpc SayHello (HelloRequest) returns (HelloReply) {};
+}
+// 定义HelloRequest消息、struct
+// 这个是方法的参数
+message HelloRequest {
+    string name = 1; // 定义一个字段，类型为string，编号为1, 字段名称为name
+}
+// 定义HelloReply消息、struct
+// 这个是方法的返回值
+// 这个是方法的返回值    
+message HelloReply {
+    string message = 1; // 定义一个字段，类型为string，编号为1 , 字段名称为message
+}

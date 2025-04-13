@@ -1,0 +1,25 @@
+syntax = "proto3"; // 指定proto版本
+
+// package helloworld; // 指定包名      
+
+// 定义Greeter服务 
+// 相当于java中的接口
+// Greeter相当于go中的接口、struct
+service Greeter {
+    // 定义SayHello方法
+    // 输入参数：HelloRequest
+    // 输出参数：HelloReply 
+    rpc SayHello (HelloRequest) returns (HelloReply) {};
+}
+
+// 定义HelloRequest消息、struct
+// 这个是方法的参数
+message HelloRequest {
+    string name = 1; // 定义一个字段，类型为string，编号为1, 字段名称为name
+}
+
+// 定义HelloReply消息、struct
+// 这个是方法的返回值
+message HelloReply {
+    string message = 1; // 定义一个字段，类型为string，编号为1 , 字段名称为message
+}
