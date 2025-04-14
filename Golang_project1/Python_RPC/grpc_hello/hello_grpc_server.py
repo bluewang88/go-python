@@ -19,6 +19,7 @@ from concurrent import futures
 class Greeter(helloworld_pb2_grpc.GreeterServicer):
     # 实现SayHello方法
     def SayHello(self, request, context):
+        print(f"GRPC Python Server Received request: {request}")
         # 返回HelloReply消息
         return helloworld_pb2.HelloReply(message=f"Hello, {request.name}!")
 

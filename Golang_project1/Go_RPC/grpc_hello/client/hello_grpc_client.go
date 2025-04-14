@@ -16,7 +16,7 @@ func main() {
 	}
 	defer conn.Close()
 	client := proto.NewGreeterClient(conn) // 创建客户端
-	replay, err := client.SayHello(context.Background(), &proto.HelloRequest{Name: "world"})
+	replay, err := client.SayHello(context.Background(), &proto.HelloRequest{Name: " from go client world"})
 	// replay, err := client.SayHello(nil, &proto.HelloRequest{Name: "world"})
 	if err != nil {
 		fmt.Println("Error calling SayHello:", err)

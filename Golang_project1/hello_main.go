@@ -2,7 +2,7 @@ package main
 
 // "Golang_project1/Go_base"
 import (
-	grpc_server_hello "Golang_project1/Go_RPC/grpc_hello/server"
+	grpc_stream_server "Golang_project1/Go_RPC/grpc_stream/server"
 )
 
 func main() {
@@ -47,7 +47,8 @@ func main() {
 	// gorpc_client.HelloRpcClient() // rpc client
 	// rpcoptimizedhello.HelloRpcServerOptimized() // jsonrpc server
 
-	grpc_server_hello.HelloGrpcNewServer() // grpc server
+	// grpc_server_hello.HelloGrpcNewServer() // grpc server
+	grpc_stream_server.HelloRpcStreamServer() // grpc stream server
 
 	// Go_base.PointerReceiverDemo()
 	// Go_base.ValueReceiverDemo()
