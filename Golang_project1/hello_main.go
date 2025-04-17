@@ -25,19 +25,13 @@ func main() {
 	// Go_base.HelloStrconv()
 	// Go_base.ArgsDemo()
 	// Go_base.FlagDemo()
-
 	// objectgotest.HelloType() // type的使用方式
-
 	// objectgotest.HelloInterface()
-
 	// gorouting_test.HelloMutex1() // 互斥锁
 	// gorouting_test.HelloRWMutex() // 读写锁
-
 	// gorouting_test.HelloGoRoutineWorld()\
 	// gorouting_test.HelloGoroutineSort() // goroutine的使用
-
 	// gorouting_test.HelloChannelType()
-
 	// gorouting_test.HelloChannel() // 通道的使用
 
 	//-------------rpc-------------------
