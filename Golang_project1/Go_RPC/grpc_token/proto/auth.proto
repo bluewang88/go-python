@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option go_package = ".;proto";
+
+// 定义认证服务
+service AuthService {
+    // Login方法用于用户登录并获取认证token
+    rpc Login (LoginRequest) returns (LoginResponse);
+    // SayHello是一个需要认证的方法示例
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+// 登录请求消息
+message LoginRequest {
+    string username = 1; // 用户名
+    string password = 2; // 密码
+}
+
+// 登录响应消息
+message LoginResponse {
+    string token = 1; // 认证令牌
+    string message = 2; // 响应消息
+}
+
+// Hello请求消息
+message HelloRequest {
+    string name = 1; // 名称
+}
+
+// Hello响应消息
+message HelloResponse {
+    string message = 1; // 响应消息
+}
