@@ -1,4 +1,4 @@
-package Go_base
+package Go_base_map
 
 import (
 	"fmt"
@@ -30,7 +30,7 @@ import (
 
 func HelloMap() {
 	// 1. 直接初始化,通过字面值
-	fmt.Println("-----------直接初始化,通过字面值--------------")
+	fmt.Println("-----------1.直接初始化,通过字面值--------------")
 	map1 := map[string]int{
 		"a": 1,
 		"b": 2,
@@ -49,7 +49,7 @@ func HelloMap() {
 	fmt.Println("------------------------------")
 
 	// 2. 通过make函数创建，makeh函数可以创建slice、map和channel
-	fmt.Println("-----------通过make函数创建map--------------")
+	fmt.Println("-----------2.通过make函数创建map--------------")
 	map2 := make(map[string]int)
 	map2["x"] = 10
 	map2["y"] = 20
@@ -66,7 +66,7 @@ func HelloMap() {
 	fmt.Println("------------------------------")
 
 	// 3.定义一个空的map
-	fmt.Println("-----------定义一个空的map--------------")
+	fmt.Println("-----------3.定义一个空的map--------------")
 	map3 := make(map[string]int)
 	fmt.Println("map3:", map3)
 	fmt.Println("map3的地址是:", &map3)
@@ -77,6 +77,44 @@ func HelloMap() {
 	fmt.Println("map3的值是:", map3["z"]) // 如果key不存在，返回值类型的零值
 	fmt.Println("map3的值是:", map3["a"]) // 如果key不存在，返回值类型的零值
 	fmt.Println("map3的类型是:", fmt.Sprintf("%T", map3))
+	fmt.Println("------------------------------")
+
+	// 	map 容量与长度的区别
+	// 容量而非长度：10 这个参数指定的是 map 的初始容量，而不是长度。
+	// 不限制大小：与切片不同，map 指定初始容量后，并不会限制 map 可以存储的元素数量。当元素数量超过初始容量时，map 会自动扩容。
+	// 性能优化：指定合理的初始容量是一种性能优化手段，可以减少 map 在增长过程中的重新哈希操作。
+
+	// 4.通过 make 创建map，并同时指定长度
+	fmt.Println("-----------4.通过 make 创建map，并同时指定长度--------------")
+	map4 := make(map[string]int, 10) // 创建一个长度为10的map
+	fmt.Println("map4:", map4)
+	fmt.Println("map4的地址是:", &map4)
+	fmt.Printf("map4的地址是:%p\n", &map4)
+	fmt.Println("map4的长度是:", len(map4))
+	fmt.Println("map4的值是:", map4["x"]) // 如果key不存在，返回值类型的零值
+	fmt.Println("map4的值是:", map4["y"]) // 如果key不存在，返回值类型的零值
+	fmt.Println("map4的值是:", map4["z"]) // 如果key不存在，返回值类型的零值
+	fmt.Println("map4的值是:", map4["a"]) // 如果key不存在，返回值类型的零值
+	fmt.Println("map4的类型是:", fmt.Sprintf("%T", map4))
+	fmt.Println("------------------------------")
+
+	// 5.通过数组创建map
+	fmt.Println("-----------5.通过数组创建map--------------")
+	var arr = [3]string{"a", "b", "c"}
+	map5 := make(map[string]int)
+	for i := 0; i < len(arr); i++ {
+		map5[arr[i]] = i + 1
+	}
+	fmt.Println("map5:", map5)
+	fmt.Println("map5的地址是:", &map5)
+	fmt.Printf("map5的地址是:%p\n", &map5)
+	fmt.Println("map5的长度是:", len(map5)) // map没有容量的概念
+	fmt.Println("map5的值是:", map5["a"])  // 如果key不存在，返回值类型的零值
+	fmt.Println("map5的值是:", map5["b"])  // 如果key不存在，返回值类型的零值
+	fmt.Println("map5的值是:", map5["c"])  // 如果key不存在，返回值类型的零值
+	fmt.Println("map5的值是:", map5["d"])  // 如果key不存在，返回值类型的零值
+	fmt.Println("map5的类型是:", fmt.Sprintf("%T", map5))
+	fmt.Println("------------------------------")
 
 	// 删除map中的某个元素
 	fmt.Println("-----------删除map中的某个元素--------------")
