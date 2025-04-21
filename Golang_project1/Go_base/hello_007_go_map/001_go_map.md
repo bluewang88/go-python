@@ -197,8 +197,5 @@ func main() {
 }
 ```
 - `copy.Copy(m1)`：使用`copy`包中的`Copy`函数拷贝map，返回一个新的map。
-- `fmt.Println(m2)`：打印拷贝后的map的内容，输出`map[a:1 b:2 c:3]`，表示拷贝成功。
-- `copy`包：用于拷贝数据结构的包。
-
-
+- `fmt.Println(m2)`：打印拷贝后的map的内容，输出`map[a:1 b:2 c:3]`，表示拷
 

@@ -1,4 +1,4 @@
-package Go_base
+package Go_Base_func
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 // HelloDefer 展示defer的各种用法和注意事项
-func HelloDefer() {
+func HelloDeferDemo() {
 	fmt.Println("===== 1. defer基本用法 =====")
 	deferBasic()
 

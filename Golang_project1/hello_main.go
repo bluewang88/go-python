@@ -2,7 +2,7 @@ package main
 
 // "Golang_project1/Go_base"
 import (
-	grpc_stream_server "Golang_project1/Go_RPC/grpc_stream/server"
+	Go_Base_func "Golang_project1/Go_base/hello_008_go_function"
 )
 
 func main() {
@@ -34,6 +34,9 @@ func main() {
 	// gorouting_test.HelloChannelType()
 	// gorouting_test.HelloChannel() // 通道的使用
 
+	//------------defer-------------------
+	Go_Base_func.HelloDefer2() // defer的使用
+
 	//-------------rpc-------------------
 	// gorpc_server.HelloRpcServer() // rpc server
 	// gorpc_server.HelloJsonRpcServer() // jsonrpc server
@@ -42,7 +45,7 @@ func main() {
 	// rpcoptimizedhello.HelloRpcServerOptimized() // jsonrpc server
 
 	// grpc_server_hello.HelloGrpcNewServer() // grpc server
-	grpc_stream_server.HelloRpcStreamServer() // grpc stream server
+	// grpc_stream_server.HelloRpcStreamServer() // grpc stream server
 
 	// Go_base.PointerReceiverDemo()
 	// Go_base.ValueReceiverDemo()
