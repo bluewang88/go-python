@@ -1,4 +1,4 @@
-package Go_base
+package Go_base_point
 
 import (
 	"fmt"
