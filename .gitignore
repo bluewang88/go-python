@@ -1,0 +1,18 @@
+# MongoDB 数据文件
+Golang_project1/yapi/docker-yapi/mongo/data/
+Golang_project1/yapi/docker-yapi/mongo/data/db/
+**/mongo/data/
+**/mongo/data/db/
+
+# MongoDB 日志文件
+**/mongo/log/
+*.log
+
+# MongoDB 特定文件
+**/WiredTiger*
+**/diagnostic.data/
+**/*.wt
+**/*.lock
+**/*.turtle
+**/journal/
+
