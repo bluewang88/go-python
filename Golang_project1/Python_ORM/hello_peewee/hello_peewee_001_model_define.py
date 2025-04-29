@@ -1,5 +1,5 @@
 # 1. 定义并生成表
-from peewee import *
+from peewee import Model, AutoField, CharField, DateTimeField, ForeignKeyField, TextField, BooleanField, MySQLDatabase
 import datetime
 
 # 使用 logger

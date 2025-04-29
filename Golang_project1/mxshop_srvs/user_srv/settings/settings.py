@@ -1,7 +1,7 @@
 from playhouse.pool import PooledMySQLDatabase
 from playhouse.shortcuts import ReconnectMixin
 
-class ReconnectMySQLDatabase(ReconnectMixin, PooledMySQLDatabase):
+class ReconnectMySQLDatabase(ReconnectMixin, PooledMySQLDatabase): # type: ignore
     pass
 
 # Database configuration
@@ -10,7 +10,7 @@ MYSQL_USER = "root"
 MYSQL_PASSWORD = "root"
 MYSQL_HOST = "127.0.0.1"
 MYSQL_PORT = 13306
-DB = ReconnectMySQLDatabase(
+MYSQL_CONN = ReconnectMySQLDatabase(
     MYSQL_DB,
     max_connections=32,
     stale_timeout=300,
